@@ -1,18 +1,26 @@
 import * as React from 'react';
-import {View, Text} from 'react-native';
 import {Appbar, Title} from 'react-native-paper';
+import {StyleSheet, View} from 'react-native';
 
-const Header = () => {
+const Header = props => {
   return (
-    <Appbar.Header
-      theme={{
-        colors: {
-          primary: '#00aaff',
-        },
-      }}>
-      <Title>Weather App</Title>
+    <Appbar.Header style={styles.header}>
+      <View style={{flex: 1, flexDirection: 'row', justifyContent: 'center'}}>
+        <Title
+          style={{
+            color: 'white',
+          }}>
+          {props.name}
+        </Title>
+      </View>
     </Appbar.Header>
   );
 };
+
+const styles = StyleSheet.create({
+  header: {
+    backgroundColor: '#00aaff',
+  },
+});
 
 export default Header;
