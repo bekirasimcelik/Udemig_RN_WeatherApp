@@ -6,12 +6,7 @@ const Header = props => {
   return (
     <Appbar.Header style={styles.header}>
       <View style={{flex: 1, flexDirection: 'row', justifyContent: 'center'}}>
-        <Title
-          style={{
-            color: 'white',
-          }}>
-          {props.name}
-        </Title>
+        <Title style={{color: 'white'}}>{props.name}</Title>
       </View>
     </Appbar.Header>
   );
