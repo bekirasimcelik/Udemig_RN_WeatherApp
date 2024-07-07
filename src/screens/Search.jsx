@@ -26,7 +26,7 @@ const Search = ({navigation}) => {
         }
         const result = await response.json();
         setWeather(result);
-        setCities([result.location]); // Gelen şehir bilgisini cities state'ine ekle
+        setCities([result.location]);
       } catch (error) {
         console.error('Fetch error: ', error);
         Alert.alert('Error', 'Network request failed');
